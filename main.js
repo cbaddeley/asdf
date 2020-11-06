@@ -211,6 +211,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _features_log_daily_log_daily_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./features/log-daily/log-daily.component */ "./src/app/features/log-daily/log-daily.component.ts");
 /* harmony import */ var _features_leaderboards_leaderboards_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./features/leaderboards/leaderboards.component */ "./src/app/features/leaderboards/leaderboards.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @swimlane/ngx-charts */ "./node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/swimlane-ngx-charts.js");
+
 
 
 
@@ -316,6 +318,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_8__["OverlayModule"],
             _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_9__["PortalModule"],
             _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollingModule"],
+            _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_52__["NgxChartsModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
         _features_profile_profile_component__WEBPACK_IMPORTED_MODULE_48__["ProfileComponent"],
@@ -367,7 +370,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _angular_material_tree__WEBPACK_IMPORTED_MODULE_47__["MatTreeModule"],
         _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_8__["OverlayModule"],
         _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_9__["PortalModule"],
-        _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollingModule"]] }); })();
+        _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollingModule"],
+        _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_52__["NgxChartsModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -426,6 +430,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_8__["OverlayModule"],
                     _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_9__["PortalModule"],
                     _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_10__["ScrollingModule"],
+                    _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_52__["NgxChartsModule"],
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -559,11 +564,12 @@ LeaderboardsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
 /*!***********************************************************!*\
   !*** ./src/app/features/log-daily/log-daily.component.ts ***!
   \***********************************************************/
-/*! exports provided: LogDailyComponent */
+/*! exports provided: multi, LogDailyComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "multi", function() { return multi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogDailyComponent", function() { return LogDailyComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
@@ -572,6 +578,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+/* harmony import */ var _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @swimlane/ngx-charts */ "./node_modules/@swimlane/ngx-charts/__ivy_ngcc__/fesm2015/swimlane-ngx-charts.js");
 
 
 
@@ -580,67 +587,171 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+var multi = [
+    {
+        "name": "You",
+        "series": [
+            {
+                "value": 24,
+                "name": "8-21"
+            },
+            {
+                "value": 28,
+                "name": "8-30"
+            },
+            {
+                "value": 20,
+                "name": "9-1"
+            },
+            {
+                "value": 25,
+                "name": "9-3"
+            },
+            {
+                "value": 30,
+                "name": "9-5"
+            },
+            {
+                "value": 35,
+                "name": "9-7"
+            },
+            {
+                "value": 40,
+                "name": "9-10"
+            },
+            {
+                "value": 45,
+                "name": "9-15"
+            },
+            {
+                "value": 50,
+                "name": "9-25"
+            },
+            {
+                "value": 55,
+                "name": "9-30"
+            },
+            {
+                "value": 56,
+                "name": "10-5"
+            },
+            {
+                "value": 60,
+                "name": "10-10"
+            },
+            {
+                "value": 65,
+                "name": "10-20"
+            },
+            {
+                "value": 80,
+                "name": "10-30"
+            },
+            {
+                "value": 95,
+                "name": "11-5"
+            }
+        ]
+    },
+];
 class LogDailyComponent {
-    constructor() { }
+    constructor() {
+        this.multi = multi;
+        this.view = [700, 300];
+        // options
+        this.legend = true;
+        this.showLabels = true;
+        this.animations = true;
+        this.xAxis = true;
+        this.yAxis = true;
+        this.showYAxisLabel = true;
+        this.showXAxisLabel = true;
+        this.xAxisLabel = 'Date';
+        this.yAxisLabel = 'Percentage';
+        this.timeline = true;
+        this.colorScheme = {
+            domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+        };
+    }
     ngOnInit() {
     }
     logWork() {
         this.activity = '';
         this.duration = undefined;
     }
+    onSelect(data) {
+        console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+    }
+    onActivate(data) {
+        console.log('Activate', JSON.parse(JSON.stringify(data)));
+    }
+    onDeactivate(data) {
+        console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+    }
 }
 LogDailyComponent.ɵfac = function LogDailyComponent_Factory(t) { return new (t || LogDailyComponent)(); };
-LogDailyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LogDailyComponent, selectors: [["app-log-daily"]], decls: 26, vars: 2, consts: [[2, "display", "flex", "justify-content", "space-between"], ["appearance", "fill"], [3, "ngModel", "ngModelChange"], ["value", "option"], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", "color", "primary", 3, "click"]], template: function LogDailyComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Log Daily Activity");
+LogDailyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LogDailyComponent, selectors: [["app-log-daily"]], decls: 30, vars: 12, consts: [[2, "display", "flex"], [2, "display", "flex", "justify-content", "space-between"], ["appearance", "fill"], [3, "ngModel", "ngModelChange"], ["value", "option"], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", "color", "primary", 3, "click"], [2, "margin-left", "20px"], [2, "fill", "#fff", 3, "view", "scheme", "showXAxisLabel", "showYAxisLabel", "xAxis", "yAxis", "xAxisLabel", "yAxisLabel", "timeline", "results", "select", "activate", "deactivate"]], template: function LogDailyComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Log Daily Activity");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-form-field", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Activity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mat-form-field", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Activity");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-select", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LogDailyComponent_Template_mat_select_ngModelChange_7_listener($event) { return ctx.activity = $event; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-option", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Walking");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-select", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LogDailyComponent_Template_mat_select_ngModelChange_8_listener($event) { return ctx.activity = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "mat-option", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Walking");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-option", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Running");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-option", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Running");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-option", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Cycling");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-option", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Cycling");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-option", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Swimming");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-option", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Swimming");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-option", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Dog Walking");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-form-field", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-label");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Duration");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "input", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LogDailyComponent_Template_input_ngModelChange_22_listener($event) { return ctx.duration = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-option", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Dog Walking");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function LogDailyComponent_Template_button_click_24_listener() { return ctx.logWork(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Log");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-form-field", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Duration");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "input", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LogDailyComponent_Template_input_ngModelChange_23_listener($event) { return ctx.duration = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function LogDailyComponent_Template_button_click_25_listener() { return ctx.logWork(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Log");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "ngx-charts-line-chart", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("select", function LogDailyComponent_Template_ngx_charts_line_chart_select_29_listener($event) { return ctx.onSelect($event); })("activate", function LogDailyComponent_Template_ngx_charts_line_chart_activate_29_listener($event) { return ctx.onActivate($event); })("deactivate", function LogDailyComponent_Template_ngx_charts_line_chart_deactivate_29_listener($event) { return ctx.onDeactivate($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.activity);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.duration);
-    } }, directives: [_angular_material_form_field__WEBPACK_IMPORTED_MODULE_1__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_1__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_2__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatOption"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmVzL2xvZy1kYWlseS9sb2ctZGFpbHkuY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("view", ctx.view)("scheme", "cool")("showXAxisLabel", ctx.showXAxisLabel)("showYAxisLabel", ctx.showYAxisLabel)("xAxis", ctx.xAxis)("yAxis", ctx.yAxis)("xAxisLabel", ctx.xAxisLabel)("yAxisLabel", ctx.yAxisLabel)("timeline", ctx.timeline)("results", ctx.multi);
+    } }, directives: [_angular_material_form_field__WEBPACK_IMPORTED_MODULE_1__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_1__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_2__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_4__["MatOption"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_7__["LineChartComponent"]], styles: [".dark[_ngcontent-%COMP%] {\n  \n  \n  background: #1b1e27;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   text[_ngcontent-%COMP%] {\n  fill: #a0aabe;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .tooltip-anchor[_ngcontent-%COMP%] {\n  fill: white;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .gridline-path[_ngcontent-%COMP%] {\n  stroke: #2f3646;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .refline-path[_ngcontent-%COMP%] {\n  stroke: #455066;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .reference-area[_ngcontent-%COMP%] {\n  fill: #fff;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .grid-panel.odd[_ngcontent-%COMP%]   rect[_ngcontent-%COMP%] {\n  fill: rgba(255, 255, 255, 0.05);\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .number-card[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  color: #f0f1f6;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .gauge[_ngcontent-%COMP%]   .background-arc[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  fill: #2f3646;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .gauge[_ngcontent-%COMP%]   .gauge-tick[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  stroke: #a0aabe;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .gauge[_ngcontent-%COMP%]   .gauge-tick[_ngcontent-%COMP%]   text[_ngcontent-%COMP%] {\n  fill: #a0aabe;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .linear-gauge[_ngcontent-%COMP%]   .background-bar[_ngcontent-%COMP%]   path[_ngcontent-%COMP%] {\n  fill: #2f3646;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .linear-gauge[_ngcontent-%COMP%]   .units[_ngcontent-%COMP%] {\n  fill: #72809b;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .timeline[_ngcontent-%COMP%]   .brush-background[_ngcontent-%COMP%] {\n  fill: rgba(255, 255, 255, 0.05);\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .timeline[_ngcontent-%COMP%]   .brush[_ngcontent-%COMP%]   .selection[_ngcontent-%COMP%] {\n  fill: rgba(255, 255, 255, 0.1);\n  stroke: #aaa;\n}\n.dark[_ngcontent-%COMP%]   .ngx-charts[_ngcontent-%COMP%]   .polar-chart[_ngcontent-%COMP%]   .polar-chart-background[_ngcontent-%COMP%] {\n  fill: #1e222e;\n}\n.dark[_ngcontent-%COMP%]   .chart-legend[_ngcontent-%COMP%]   .legend-labels[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.05) !important;\n}\n.dark[_ngcontent-%COMP%]   .chart-legend[_ngcontent-%COMP%]   .legend-item[_ngcontent-%COMP%]:hover {\n  color: #fff;\n}\n.dark[_ngcontent-%COMP%]   .chart-legend[_ngcontent-%COMP%]   .legend-label[_ngcontent-%COMP%]:hover {\n  color: #fff !important;\n}\n.dark[_ngcontent-%COMP%]   .chart-legend[_ngcontent-%COMP%]   .legend-label[_ngcontent-%COMP%]   .active[_ngcontent-%COMP%]   .legend-label-text[_ngcontent-%COMP%] {\n  color: #fff !important;\n}\n.dark[_ngcontent-%COMP%]   .chart-legend[_ngcontent-%COMP%]   .scale-legend-label[_ngcontent-%COMP%] {\n  color: #a0aabe;\n}\n.dark[_ngcontent-%COMP%]   .advanced-pie-legend[_ngcontent-%COMP%] {\n  color: #a0aabe;\n}\n.dark[_ngcontent-%COMP%]   .advanced-pie-legend[_ngcontent-%COMP%]   .legend-item[_ngcontent-%COMP%]:hover {\n  color: #fff !important;\n}\n.dark[_ngcontent-%COMP%]   .number-card[_ngcontent-%COMP%]   .number-card-label[_ngcontent-%COMP%] {\n  font-size: 0.8em;\n  color: #a0aabe;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmVhdHVyZXMvbG9nLWRhaWx5L2xvZy1kYWlseS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJOztNQUFBO0VBVUE7O01BQUE7RUFVQSxtQkFoQmtCO0FBR3RCO0FBZ0JNO0VBQ0UsYUFUYTtBQUxyQjtBQWlCTTtFQUNFLFdBQUE7QUFmUjtBQWtCTTtFQUNFLGVBMUJXO0FBVW5CO0FBbUJNO0VBQ0UsZUE3QmE7QUFZckI7QUFvQk07RUFDRSxVQUFBO0FBbEJSO0FBdUJVO0VBQ0UsK0JBQUE7QUFyQlo7QUEyQlE7RUFDRSxjQXBDYTtBQVd2QjtBQStCVTtFQUNFLGFBdERPO0FBeUJuQjtBQWtDVTtFQUNFLGVBbkRTO0FBbUJyQjtBQWtDVTtFQUNFLGFBdERTO0FBc0JyQjtBQXVDVTtFQUNFLGFBdkVPO0FBa0NuQjtBQXlDUTtFQUNFLGFBckVZO0FBOEJ0QjtBQTRDUTtFQUNFLCtCQUFBO0FBMUNWO0FBOENVO0VBQ0UsOEJBQUE7RUFDQSxZQUFBO0FBNUNaO0FBaURNO0VBQ0UsYUFBQTtBQS9DUjtBQW9ETTtFQUNFLGdEQUFBO0FBbERSO0FBc0RRO0VBQ0UsV0FBQTtBQXBEVjtBQXlEUTtFQUNFLHNCQUFBO0FBdkRWO0FBMkRVO0VBQ0Usc0JBQUE7QUF6RFo7QUE4RE07RUFDRSxjQWpIYTtBQXFEckI7QUFnRUk7RUFDRSxjQXRIZTtBQXdEckI7QUFpRVE7RUFDRSxzQkFBQTtBQS9EVjtBQW9FSTtFQUNFLGdCQUFBO0VBQ0EsY0FqSWU7QUErRHJCIiwiZmlsZSI6InNyYy9hcHAvZmVhdHVyZXMvbG9nLWRhaWx5L2xvZy1kYWlseS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kYXJrIHtcclxuICAgIC8qKlxyXG4gICAgICAgKiBCYWNrZ3JvdW5kc1xyXG4gICAgICAgKi9cclxuICAgICRjb2xvci1iZy1kYXJrZXN0OiAjMTMxNDFiO1xyXG4gICAgJGNvbG9yLWJnLWRhcmtlcjogIzFiMWUyNztcclxuICAgICRjb2xvci1iZy1kYXJrOiAjMjMyODM3O1xyXG4gICAgJGNvbG9yLWJnLW1lZDogIzJmMzY0NjtcclxuICAgICRjb2xvci1iZy1saWdodDogIzQ1NTA2NjtcclxuICAgICRjb2xvci1iZy1saWdodGVyOiAjNWI2ODgyO1xyXG4gIFxyXG4gICAgLyoqXHJcbiAgICAgICAqIFRleHRcclxuICAgICAgICovXHJcbiAgICAkY29sb3ItdGV4dC1kYXJrOiAjNzI4MDliO1xyXG4gICAgJGNvbG9yLXRleHQtbWVkLWRhcms6ICM5MTlkYjU7XHJcbiAgICAkY29sb3ItdGV4dC1tZWQ6ICNhMGFhYmU7XHJcbiAgICAkY29sb3ItdGV4dC1tZWQtbGlnaHQ6ICNkOWRjZTE7XHJcbiAgICAkY29sb3ItdGV4dC1saWdodDogI2YwZjFmNjtcclxuICAgICRjb2xvci10ZXh0LWxpZ2h0ZXI6ICNmZmY7XHJcbiAgXHJcbiAgICBiYWNrZ3JvdW5kOiAkY29sb3ItYmctZGFya2VyO1xyXG4gIFxyXG4gICAgLm5neC1jaGFydHMge1xyXG4gICAgICB0ZXh0IHtcclxuICAgICAgICBmaWxsOiAkY29sb3ItdGV4dC1tZWQ7XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLnRvb2x0aXAtYW5jaG9yIHtcclxuICAgICAgICBmaWxsOiByZ2IoMjU1LCAyNTUsIDI1NSk7XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLmdyaWRsaW5lLXBhdGgge1xyXG4gICAgICAgIHN0cm9rZTogJGNvbG9yLWJnLW1lZDtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAucmVmbGluZS1wYXRoIHtcclxuICAgICAgICBzdHJva2U6ICRjb2xvci1iZy1saWdodDtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAucmVmZXJlbmNlLWFyZWEge1xyXG4gICAgICAgIGZpbGw6ICNmZmY7XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLmdyaWQtcGFuZWwge1xyXG4gICAgICAgICYub2RkIHtcclxuICAgICAgICAgIHJlY3Qge1xyXG4gICAgICAgICAgICBmaWxsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAubnVtYmVyLWNhcmQge1xyXG4gICAgICAgIHAge1xyXG4gICAgICAgICAgY29sb3I6ICRjb2xvci10ZXh0LWxpZ2h0O1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAuZ2F1Z2Uge1xyXG4gICAgICAgIC5iYWNrZ3JvdW5kLWFyYyB7XHJcbiAgICAgICAgICBwYXRoIHtcclxuICAgICAgICAgICAgZmlsbDogJGNvbG9yLWJnLW1lZDtcclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgXHJcbiAgICAgICAgLmdhdWdlLXRpY2sge1xyXG4gICAgICAgICAgcGF0aCB7XHJcbiAgICAgICAgICAgIHN0cm9rZTogJGNvbG9yLXRleHQtbWVkO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgdGV4dCB7XHJcbiAgICAgICAgICAgIGZpbGw6ICRjb2xvci10ZXh0LW1lZDtcclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLmxpbmVhci1nYXVnZSB7XHJcbiAgICAgICAgLmJhY2tncm91bmQtYmFyIHtcclxuICAgICAgICAgIHBhdGgge1xyXG4gICAgICAgICAgICBmaWxsOiAkY29sb3ItYmctbWVkO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICBcclxuICAgICAgICAudW5pdHMge1xyXG4gICAgICAgICAgZmlsbDogJGNvbG9yLXRleHQtZGFyaztcclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLnRpbWVsaW5lIHtcclxuICAgICAgICAuYnJ1c2gtYmFja2dyb3VuZCB7XHJcbiAgICAgICAgICBmaWxsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpO1xyXG4gICAgICAgIH1cclxuICBcclxuICAgICAgICAuYnJ1c2gge1xyXG4gICAgICAgICAgLnNlbGVjdGlvbiB7XHJcbiAgICAgICAgICAgIGZpbGw6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTtcclxuICAgICAgICAgICAgc3Ryb2tlOiAjYWFhO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAucG9sYXItY2hhcnQgLnBvbGFyLWNoYXJ0LWJhY2tncm91bmQge1xyXG4gICAgICAgIGZpbGw6IHJnYigzMCwgMzQsIDQ2KTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIFxyXG4gICAgLmNoYXJ0LWxlZ2VuZCB7XHJcbiAgICAgIC5sZWdlbmQtbGFiZWxzIHtcclxuICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpICFpbXBvcnRhbnQ7XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLmxlZ2VuZC1pdGVtIHtcclxuICAgICAgICAmOmhvdmVyIHtcclxuICAgICAgICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAubGVnZW5kLWxhYmVsIHtcclxuICAgICAgICAmOmhvdmVyIHtcclxuICAgICAgICAgIGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbiAgICAgICAgfVxyXG4gIFxyXG4gICAgICAgIC5hY3RpdmUge1xyXG4gICAgICAgICAgLmxlZ2VuZC1sYWJlbC10ZXh0IHtcclxuICAgICAgICAgICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICBcclxuICAgICAgLnNjYWxlLWxlZ2VuZC1sYWJlbCB7XHJcbiAgICAgICAgY29sb3I6ICRjb2xvci10ZXh0LW1lZDtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIFxyXG4gICAgLmFkdmFuY2VkLXBpZS1sZWdlbmQge1xyXG4gICAgICBjb2xvcjogJGNvbG9yLXRleHQtbWVkO1xyXG4gIFxyXG4gICAgICAubGVnZW5kLWl0ZW0ge1xyXG4gICAgICAgICY6aG92ZXIge1xyXG4gICAgICAgICAgY29sb3I6ICNmZmYgIWltcG9ydGFudDtcclxuICAgICAgICB9XHJcbiAgICAgIH1cclxuICAgIH1cclxuICBcclxuICAgIC5udW1iZXItY2FyZCAubnVtYmVyLWNhcmQtbGFiZWwge1xyXG4gICAgICBmb250LXNpemU6IDAuOGVtO1xyXG4gICAgICBjb2xvcjogJGNvbG9yLXRleHQtbWVkO1xyXG4gICAgfVxyXG4gIH0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](LogDailyComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
